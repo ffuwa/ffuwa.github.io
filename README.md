@@ -1,1 +1,22 @@
-# ffuwa.github.io
+<!DOCTYPE HTML>
+<html onclick="jump()">
+	<head>
+		<title>JavaScript</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<h1>Chrome Dino Fuwa Edition</h1>
+
+		<div id="game">
+			<div id="chr">
+				<img id="chrimg" src="chr.gif" width="23" height="23">
+			</div>
+			<div id="block">
+				<img src="block.webp" width="20" height="20">
+			</div>
+		<div>
+
+    <script src="index.js"></script>
+	</body>
+</html>
