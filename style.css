@@ -1,14 +1,14 @@
 @import "{{ site.theme }}";
-
 header {
 	display: none;
 }
 
+
 body{
 	background-color: #282828;
 
-	-moz-transform: scale(1.7); /* for Firefox, default 1*/
-    zoom:170%; /* For Chrome, IE, default 100%*/
+	-moz-transform: scale(1.7);
+  	zoom:170%;
 }
 
 *{
@@ -19,7 +19,9 @@ body{
 h1{
 	text-align: center;
 	color: white;
+	font-family: sans-serif;
 }
+
 
 
 #game{
