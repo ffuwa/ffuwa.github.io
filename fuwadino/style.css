@@ -1,0 +1,60 @@
+@import "{{ site.theme }}";
+header {
+	display: none;
+}
+
+
+body{
+	background-color: #282828;
+
+	-moz-transform: scale(1.7);
+  	zoom:170%;
+}
+
+h1{
+	text-align: center;
+	color: white;
+	font-family: sans-serif;
+}
+
+
+
+#game{
+	width: 500px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+
+	border: 1px solid white;
+}
+#chr{
+	width: 20px;
+	height: 50px;
+	position: relative;
+	top: 150px;
+}
+#chrimg{
+	margin-top: 27px;
+}
+.animate{
+	animation: jump 500ms;
+}
+@keyframes jump{
+	0%{top:150px;}
+	30%{top:100px;}
+	70%{top:100px;}
+	100%{top:150px;}
+}
+#block{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 130px;
+	left: 480px;
+	animation: block 1s infinite linear;
+}
+@keyframes block{
+	0%{left:480px;}
+	100%{left:-40px;}
+}
