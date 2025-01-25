@@ -1,10 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "{{ site.theme }}";
 header {
 	display: none;
 }
 
+:root {
+    --base: rgb(30, 30, 46);
+    --overlay: #28283d;
+    --text: rgb(205, 214, 244);
+    --muted: rgb(127, 132, 156);
+
+    --red: rgb(243, 139, 168);
+    --green: rgb(166, 227, 161);
+    --yellow: rgb(249, 226, 175);
+    --blue: rgb(137, 180, 250);
+    --pink: rgb(245, 194, 231);
+    --teal: rgb(148, 226, 213);
+}
+
 p{
 	text-align: center;
-	font-family: sans-serif;
+	font-family: 'Ubuntu Mono';
 	font-size: 40px;
+	color: var(--text);
+	margin: 20px;
+}
+
+body{
+	background-color: var(--base);
+}
+
+a p{
+	color: var(--blue)
+}
+a:link {
+  color: var(--blue);
+}
+a:visited {
+  color: var(--blue);
+}
+a.hover {
+  color: var(--blue);
+}
+a:active {
+  color: var(--blue);
+} 
+
+.header{
+	font-size: 50px;
+	color: var(--pink);
+	margin: 20px;
+}
+
+.härskalänkarnavara{
+	margin-left: auto;
+	margin-right: auto;
+	width: 40vw;
+	height: 50vh;
+
+	border: solid var(--overlay);
+	background-color: var(--overlay);
 }
