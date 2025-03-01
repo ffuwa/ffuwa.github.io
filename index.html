@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fuwa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fuwa</title>
 
 
 <style>
@@ -22,25 +22,47 @@
   src: url("fonts/monogram.ttf") format("truetype");
 }
 body{
-    background-color: #F9F6E6;
-    color: #8D77AB;
-    font-family: "";
-    text-align: center;
-    font-size: 40px
+  background-color: #F9F6E6;
+  color: #8D77AB;
+  font-family: "";
+  text-align: center;
+  font-size: 30px;
 }
 *{
-    padding: 5px;
-    margin:  0;
+  padding: 0;
+  margin:  0;
+  text-shadow: 2px 2px #BAD8B6;
+  font-family: 'Jacquard 12';
+}
+img{
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #8D77AB;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+}
+.player p{
+  font-family: monogram;
+}
 </style>
 </head>
 
 
 
 <body>
-    <div>
-    <pre style="font-size: 25px; font-family: monogram; text-shadow: 2px 2px #BAD8B6;">
+  <div>
+  <pre style="font-size: 25px; font-family: monogram;">
  .o88o.                                        
  888 `"                                        
 o888oo  oooo  oooo  oooo oooo    ooo  .oooo.   
@@ -48,11 +70,21 @@ o888oo  oooo  oooo  oooo oooo    ooo  .oooo.
  888     888   888    `88..]88..8'    .oP"888  
  888     888   888     `888'`888'    d8(  888  
 o888o    `V88V"V8P'     `8'  `8'     `Y888""8o 
-    </pre>
+  </pre>
+  <p style="font-family: 'alagard'; font-size: 40px;">fuwa</p>
 
-    <p style="font-family: 'Jacquard 12'; text-shadow: 2px 2px #BAD8B6;">meow meow meow</p>
-    <p style="font-family: 'KiwiSoda';    text-shadow: 2px 2px #BAD8B6;">meow meow meow</p>
-    <p style="font-family: 'alagard';     text-shadow: 2px 2px #BAD8B6;">meow meow meow</p>
-    </div>
+  <img src="media/pawshadow.png" style="width: 30px; margin-top: 10px;">
+
+  <p>meow moew website meow fuwa fuwa fuwa meow nya nya</p>
+
+  </div>
+
+  <div class="player">
+    
+  </div>
+
+<script>
+  console.log('nyanya');
+</script>
 </body>
 </html>
