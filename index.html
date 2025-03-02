@@ -32,7 +32,8 @@ body{
   padding: 0;
   margin:  0;
   text-shadow: 2px 2px #BAD8B6;
-  font-family: 'Jacquard 12';
+  font-family: monogram;
+  color: #8D77AB;
 }
 img{
   image-rendering: -moz-crisp-edges;
@@ -42,7 +43,7 @@ img{
   -ms-interpolation-mode: nearest-neighbor;
 }
 
-.player {
+.sakdärommanvillöppnaär {
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -50,13 +51,21 @@ img{
   border: 2px solid #8D77AB;
   padding: 5px;
   margin-bottom: 10px;
-  width: 200px;
+  width: 100px;
   text-align: center;
   box-shadow: 2px 2px 0px 0px #BAD8B6;
 }
-.player *{
-  font-family: monogram;
-  color: #8D77AB;
+.musicwindow {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #8D77AB;
+  padding: 5px;
+  margin-bottom: 65px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 2px 2px 0px 0px #BAD8B6;
 }
 </style>
 </head>
@@ -78,22 +87,39 @@ o888o    `V88V"V8P'     `8'  `8'     `Y888""8o
 
   <img src="media/pawshadow.png" style="width: 30px; margin-top: 8px;">
 
-  <p>meow moew website meow fuwa fuwa fuwa meow nya nya</p>
+  <p style="font-family: 'Jacquard 12';">meow moew website meow fuwa fuwa fuwa meow nya nya</p>
 
   </div>
 
-  <div class="player">
-    <audio id="bgmusic" src="media/tomsdiner.mp3"></audio>
-    <a href="javascript:play()">play music</a>
+
+  <div>
+    <div class="sakdärommanvillöppnaär">
+      <a href="javascript:openmusic()">music</a>
+    </div>
+
+    <div class="musicwindow" id="musicwindow">
+      <audio id="song1" src="media/tomsdiner.mp3"></audio>
+
+      <a href="javascript:play1()">tomsdiner</a>
+    </div>
   </div>
 
 <script>
 console.log('nyanya');
 
-var bgmusic = document.getElementById("bgmusic");
+var musicwindow = document.getElementById("musicwindow")
+musicwindow.style.display = "none";
+function openmusic() {
+  if (musicwindow.style.display == "none") { musicwindow.style.display = "block"; }
+  else { musicwindow.style.display = "none"; }
 
-function play() {
-  bgmusic.play();
+  
+}
+
+
+var song1 = document.getElementById("song1");
+function play1() {
+  song1.play();
 }
 </script>
 </body>
