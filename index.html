@@ -49,11 +49,14 @@ img{
   transform: translateX(-50%);
   border: 2px solid #8D77AB;
   padding: 5px;
+  margin-bottom: 10px;
   width: 200px;
   text-align: center;
+  box-shadow: 2px 2px 0px 0px #BAD8B6;
 }
-.player p{
+.player *{
   font-family: monogram;
+  color: #8D77AB;
 }
 </style>
 </head>
@@ -73,18 +76,25 @@ o888o    `V88V"V8P'     `8'  `8'     `Y888""8o
   </pre>
   <p style="font-family: 'alagard'; font-size: 40px;">fuwa</p>
 
-  <img src="media/pawshadow.png" style="width: 30px; margin-top: 10px;">
+  <img src="media/pawshadow.png" style="width: 30px; margin-top: 8px;">
 
   <p>meow moew website meow fuwa fuwa fuwa meow nya nya</p>
 
   </div>
 
   <div class="player">
-    
+    <audio id="bgmusic" src="media/tomsdiner.mp3"></audio>
+    <a href="javascript:play()">play music</a>
   </div>
 
 <script>
-  console.log('nyanya');
+console.log('nyanya');
+
+var bgmusic = document.getElementById("bgmusic");
+
+function play() {
+  bgmusic.play();
+}
 </script>
 </body>
 </html>
