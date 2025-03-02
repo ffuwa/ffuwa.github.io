@@ -1,3 +1,6 @@
+
+<!-- IGNORERA MIN JÄTTEDÅLIGA KOD  SNÄLLA MOBBA INTE MIG -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +26,8 @@
 }
 body{
   background-color: #F9F6E6;
-  color: #8D77AB;
-  font-family: "";
   text-align: center;
-  font-size: 30px;
+  font-size: 1.9rem;
 }
 *{
   padding: 0;
@@ -43,38 +44,31 @@ img{
   -ms-interpolation-mode: nearest-neighbor;
 }
 
-.sakdärommanvillöppnaär {
+.sakdärommanvillöppnaär, .musicwindow{
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   border: 2px solid #8D77AB;
   padding: 5px;
-  margin-bottom: 10px;
-  width: 100px;
   text-align: center;
   box-shadow: 2px 2px 0px 0px #BAD8B6;
 }
+.sakdärommanvillöppnaär {
+  margin-bottom: 10px;
+  width: 100px;
+}
 .musicwindow {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 2px solid #8D77AB;
-  padding: 5px;
   margin-bottom: 65px;
   width: 200px;
-  text-align: center;
-  box-shadow: 2px 2px 0px 0px #BAD8B6;
 }
 </style>
 </head>
 
 
-
 <body>
   <div>
-  <pre style="font-size: 25px; font-family: monogram;">
+  <pre style="font-size: 1.6rem;">
  .o88o.                                        
  888 `"                                        
 o888oo  oooo  oooo  oooo oooo    ooo  .oooo.   
@@ -83,7 +77,7 @@ o888oo  oooo  oooo  oooo oooo    ooo  .oooo.
  888     888   888     `888'`888'    d8(  888  
 o888o    `V88V"V8P'     `8'  `8'     `Y888""8o 
   </pre>
-  <p style="font-family: 'alagard'; font-size: 40px;">fuwa</p>
+  <p style="font-family: 'alagard'; font-size: 2.5rem;">fuwa</p>
 
   <img src="media/pawshadow.png" style="width: 30px; margin-top: 8px;">
 
@@ -99,27 +93,45 @@ o888o    `V88V"V8P'     `8'  `8'     `Y888""8o
 
     <div class="musicwindow" id="musicwindow">
       <audio id="song1" src="media/tomsdiner.mp3"></audio>
+      <audio id="song2" src="media/btrain.mp3"></audio>
+      <audio id="song3" src="media/d-7.mp3"></audio>
+      <audio id="song4" src="media/extltc.mp3"></audio>
+      <audio id="song5" src="media/falun.mp3"></audio>
+      <audio id="song6" src="media/hopedngr.mp3"></audio>
+      <audio id="song7" src="media/jitout.mp3"></audio>
+      <audio id="song8" src="media/lmifred.mp3"></audio>
+      <audio id="song9" src="media/msalmonella.mp3"></audio>
+      <audio id="song10" src="media/tpissings.mp3"></audio>
 
-      <a href="javascript:play1()">tomsdiner</a>
+      <a href="javascript:play('song1')">tomsdiner.mp3</a>
+      <a href="javascript:play('song2')">btrain.mp3</a>
+      <a href="javascript:play('song3')">d-7.mp3</a>
+      <a href="javascript:play('song4')">extltc.mp3</a>
+      <a href="javascript:play('song5')">falun.mp3</a>
+      <a href="javascript:play('song6')">hopedngr.mp3</a>
+      <a href="javascript:play('song7')">jitout.mp3</a>
+      <a href="javascript:play('song8')">lmifred.mp3</a>
+      <a href="javascript:play('song9')">msalmonella.mp3</a>
+      <a href="javascript:play('song10')">tpissings.mp3</a>
     </div>
   </div>
 
 <script>
-console.log('nyanya');
+console.log('nya nya');
 
 var musicwindow = document.getElementById("musicwindow")
 musicwindow.style.display = "none";
 function openmusic() {
   if (musicwindow.style.display == "none") { musicwindow.style.display = "block"; }
   else { musicwindow.style.display = "none"; }
-
-  
 }
 
-
-var song1 = document.getElementById("song1");
-function play1() {
-  song1.play();
+function pause() {
+    document.querySelectorAll("audio").forEach(audio => audio.pause());
+}
+function play(songId) {
+    pause();
+    document.getElementById(songId).play();
 }
 </script>
 </body>
