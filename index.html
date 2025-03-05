@@ -7,6 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>fuwa</title>
+  <link rel="icon" type="image/x-icon" href="media/jirachi.png">
 
   <meta property="og:title"       content="fuwa">
   <meta property="og:site_name"   content="fuwa">
@@ -16,8 +17,7 @@
   <meta property="og:video"       content="https://ffuwa.github.io/media/kurt.mp4">
   <!-- HUR FUNKAR DET HÄR qwp -->
 
-
-<style>
+  <style>
 /* https://colorhunt.co/palette/bad8b6e1eacdf9f6e68d77ab */
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
 @font-face {
@@ -32,27 +32,32 @@
   font-family: "monogram";
   src: url("fonts/monogram.ttf") format("truetype");
 }
-body{
+body {
   background-color: #F9F6E6;
   text-align: center;
   font-size: 1.9rem;
 }
-*{
+* {
   padding: 0;
   margin:  0;
   text-shadow: 2px 2px #BAD8B6;
   font-family: monogram;
   color: #8D77AB;
 }
-img{
+img {
   image-rendering: -moz-crisp-edges;
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-}
 
-.sakdärommanvillöppnaär, .musicwindow{
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.sakdärommanvillöppnaär, .musicwindow {
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -70,14 +75,29 @@ img{
 .musicwindow {
   margin-bottom: 65px;
   width: 400px;
+  text-align: left;
+  display: flex;
+  max-height: 300px;
+  overflow-y: auto;
 }
-</style>
-</head>
+.divider {
+  width: 2px;
+  background-color: #8D77AB;
+  margin: 0 10px;
+}
 
+a:hover {
+  color: #BAD8B6;
+}
+.playing {
+  font-weight: bold;
+}
+  </style>
+</head>
 
 <body>
   <div>
-  <pre style="font-size: 1.6rem;">
+    <pre style="font-size: 1.6rem;">
  .o88o.                                        
  888 `"                                        
 o888oo  oooo  oooo  oooo oooo    ooo  .oooo.   
@@ -85,71 +105,90 @@ o888oo  oooo  oooo  oooo oooo    ooo  .oooo.
  888     888   888    `88..]88..8'    .oP"888  
  888     888   888     `888'`888'    d8(  888  
 o888o    `V88V"V8P'     `8'  `8'     `Y888""8o 
-  </pre>
-  <p style="font-family: 'alagard'; font-size: 2.5rem;">fuwa</p>
+    </pre>
+    <p style="font-family: 'alagard'; font-size: 2.5rem; margin-top: -10px;">fuwa</p>
+    <img src="media/pawshadow.png" style="width: 30px; margin-top: 8px;">
 
-  <img src="media/pawshadow.png" style="width: 30px; margin-top: 8px;">
+    <p style="font-family: 'Jacquard 12'; margin-top: 100px;">meow moew website meow fuwa fuwa fuwa meow nya nya</p>
+    <p style="font-family: 'Jacquard 12';">i'm not a furry wahhhhhhhhg (⁠╥⁠﹏⁠╥)</p>
 
-  <p style="font-family: 'Jacquard 12';">meow moew website meow fuwa fuwa fuwa meow nya nya</p>
 
+    <video controls style="width: 20%; padding-top: 20px;">
+      <source src="media/kurt.mp4" type="video/mp4">
+    </video>
+
+    
   </div>
 
-  <p style="font-size: 10rem;">I'M NOT A FURRY WAHHHHHHHHG (⁠╥⁠﹏⁠╥)</p>
   <div>
     <div class="sakdärommanvillöppnaär">
       <a href="javascript:openmusic()">music</a>
     </div>
 
-    <div class="musicwindow" id="musicwindow">
-      <audio id="tomsdiner"   src="music/tomsdiner.mp3"></audio>
-      <audio id="btrain"      src="music/btrain.mp3"></audio>
-      <audio id="extltc"      src="music/extltc.mp3"></audio>
-      <audio id="falun"       src="music/falun.mp3"></audio>
-      <audio id="jitout"      src="music/jitout.mp3"></audio>
-      <audio id="lmifred"     src="music/lmifred.mp3"></audio>
-      <audio id="msalmonella" src="music/msalmonella.mp3"></audio>
-      <audio id="tpissings"   src="music/tpissings.mp3"></audio>
-      <audio id="wbtcentre"   src="music/wbtcentre.mp3"></audio>
-      <audio id="lotion"      src="music/lotion.mp3"></audio>
-      <audio id="orbitron"    src="music/orbitron.mp3"></audio>
-      <audio id="tager"       src="music/tager.mp3"></audio>
-      <audio id="lbuzz"       src="music/lbuzz.mp3"></audio>
 
-      <a href="javascript:play('tomsdiner')"  >tomsdiner.mp3</a>
-      <a href="javascript:play('btrain')"     >btrain.mp3</a>
-      <a href="javascript:play('extltc')"     >extltc.mp3</a>
-      <a href="javascript:play('falun')"      >falun.mp3</a>
-      <a href="javascript:play('jitout')"     >jitout.mp3</a>
-      <a href="javascript:play('lmifred')"    >lmifred.mp3</a>
-      <a href="javascript:play('msalmonella')">msalmonella.mp3</a>
-      <a href="javascript:play('tpissings')"  >tpissings.mp3</a>
-      <a href="javascript:play('wbtcentre')"  >wbtcentre.mp3</a>
-      <a href="javascript:play('lotion')"     >lotion.mp3</a>
-      <a href="javascript:play('orbitron')"   >orbitron.mp3</a>
-      <a href="javascript:play('tager')"      >tager.mp3</a>
-      <a href="javascript:play('lbuzz')"      >lbuzz.mp3</a>
+
+    <div id="loading" style="display: none;">Loading...</div>
+
+    <div class="musicwindow" id="musicwindow">
+      <div style="flex: 1; padding: 0 10px;">
+        <audio id="click"       src="media/click.mp3"></audio>
+        <audio id="tomsdiner"   src="music/tomsdiner.mp3"></audio>
+        <audio id="btrain"      src="music/btrain.mp3"></audio>
+        <audio id="extltc"      src="music/extltc.mp3"></audio>
+        <audio id="falun"       src="music/falun.mp3"></audio>
+        <audio id="jitout"      src="music/jitout.mp3"></audio>
+        <audio id="lmifred"     src="music/lmifred.mp3"></audio>
+        <audio id="msalmonella" src="music/msalmonella.mp3"></audio>
+        <audio id="tpissings"   src="music/tpissings.mp3"></audio>
+        <audio id="wbtcentre"   src="music/wbtcentre.mp3"></audio>
+        <audio id="lotion"      src="music/lotion.mp3"></audio>
+        <audio id="orbitron"    src="music/orbitron.mp3"></audio>
+        <audio id="tager"       src="music/tager.mp3"></audio>
+        <audio id="lbuzz"       src="music/lbuzz.mp3"></audio>
+
+
+        <a href="javascript:play('tomsdiner')"  >tomsdiner.mp3</a><br>
+        <a href="javascript:play('btrain')"     >btrain.mp3</a><br>
+        <a href="javascript:play('extltc')"     >extltc.mp3</a><br>
+        <a href="javascript:play('falun')"      >falun.mp3</a><br>
+        <a href="javascript:play('jitout')"     >jitout.mp3</a><br>
+        <a href="javascript:play('lmifred')"    >lmifred.mp3</a><br>
+        <a href="javascript:play('msalmonella')">msalmonella.mp3</a><br>
+      </div>
+
+      <div class="divider"></div>
+
+      <div style="flex: 1; padding: 0 10px;">
+        <a href="javascript:play('tpissings')"  >tpissings.mp3</a><br>
+        <a href="javascript:play('wbtcentre')"  >wbtcentre.mp3</a><br>
+        <a href="javascript:play('lotion')"     >lotion.mp3</a><br>
+        <a href="javascript:play('orbitron')"   >orbitron.mp3</a><br>
+        <a href="javascript:play('tager')"      >tager.mp3</a><br>
+        <a href="javascript:play('lbuzz')"      >lbuzz.mp3</a><br>
+      </div>
     </div>
   </div>
 
   <p style="position: fixed; bottom: 5px; margin-left: 5px; font-size: 1rem;">hej neo <3</p>
 
-<script>
-console.log('nya nya');
+  <script>
+    console.log('nya nya');
 
-var musicwindow = document.getElementById("musicwindow")
-musicwindow.style.display = "none";
-function openmusic() {
-  if (musicwindow.style.display == "none") { musicwindow.style.display = "block"; }
-  else { musicwindow.style.display = "none"; }
-}
+    var musicwindow = document.getElementById("musicwindow");
+    musicwindow.style.display = "none";
+    function openmusic() {
+      document.getElementById("click").play();
+      if (musicwindow.style.display == "none") { musicwindow.style.display = "flex"; }
+      else { musicwindow.style.display = "none"; }
+    }
 
-function pause() {
-    document.querySelectorAll("audio").forEach(audio => audio.pause());
-}
-function play(songId) {
-    pause();
-    document.getElementById(songId).play();
-}
-</script>
+    function play(songId) {
+      document.querySelectorAll("audio").forEach(audio => audio.pause());
+      document.getElementById("click").play();
+      document.querySelectorAll("a").forEach(link => link.style.fontWeight = "normal");
+      document.getElementById(songId).play();
+      document.querySelector(`a[href="javascript:play('${songId}')"]`).style.fontWeight = "bold";
+    }
+  </script>
 </body>
 </html>
